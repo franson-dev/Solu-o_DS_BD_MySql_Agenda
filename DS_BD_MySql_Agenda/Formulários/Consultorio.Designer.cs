@@ -35,6 +35,7 @@ namespace DS_BD_MySql_Agenda
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbParametros = new System.Windows.Forms.GroupBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.lbValor2 = new System.Windows.Forms.Label();
             this.lbValor1 = new System.Windows.Forms.Label();
             this.lbProcurar = new System.Windows.Forms.Label();
@@ -43,25 +44,24 @@ namespace DS_BD_MySql_Agenda
             this.txtValor1 = new System.Windows.Forms.TextBox();
             this.cmbCondicao = new System.Windows.Forms.ComboBox();
             this.cmbColuna = new System.Windows.Forms.ComboBox();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
             this.dgvInfo = new System.Windows.Forms.DataGridView();
-            this.dataSet_Agenda = new DS_BD_MySql_Agenda.DataSet_Agenda();
-            this.dataSetAgendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaTableAdapter = new DS_BD_MySql_Agenda.DataSet_AgendaTableAdapters.PessoaTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNascDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetAgendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Agenda = new DS_BD_MySql_Agenda.DataSet_Agenda();
+            this.pessoaTableAdapter = new DS_BD_MySql_Agenda.DataSet_AgendaTableAdapters.PessoaTableAdapter();
             this.gbParametros.SuspendLayout();
             this.gbFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAgendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAgendaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
             this.SuspendLayout();
             // 
             // gbParametros
@@ -80,7 +80,21 @@ namespace DS_BD_MySql_Agenda
             this.gbParametros.Size = new System.Drawing.Size(974, 100);
             this.gbParametros.TabIndex = 0;
             this.gbParametros.TabStop = false;
-            this.gbParametros.Text = "Parâmetros para Consulta";
+            this.gbParametros.Text = resources.GetString("gbParametros.Text");
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.Location = new System.Drawing.Point(821, 44);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(127, 46);
+            this.btnConsultar.TabIndex = 16;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lbValor2
             // 
@@ -163,20 +177,6 @@ namespace DS_BD_MySql_Agenda
             this.cmbColuna.Size = new System.Drawing.Size(171, 28);
             this.cmbColuna.TabIndex = 8;
             // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.Location = new System.Drawing.Point(821, 44);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(127, 46);
-            this.btnConsultar.TabIndex = 16;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
             // gbFiltro
             // 
             this.gbFiltro.Controls.Add(this.dgvInfo);
@@ -230,25 +230,6 @@ namespace DS_BD_MySql_Agenda
             this.dgvInfo.Size = new System.Drawing.Size(945, 268);
             this.dgvInfo.TabIndex = 0;
             // 
-            // dataSet_Agenda
-            // 
-            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
-            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSetAgendaBindingSource
-            // 
-            this.dataSetAgendaBindingSource.DataSource = this.dataSet_Agenda;
-            this.dataSetAgendaBindingSource.Position = 0;
-            // 
-            // pessoaBindingSource
-            // 
-            this.pessoaBindingSource.DataMember = "Pessoa";
-            this.pessoaBindingSource.DataSource = this.dataSetAgendaBindingSource;
-            // 
-            // pessoaTableAdapter
-            // 
-            this.pessoaTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -298,6 +279,25 @@ namespace DS_BD_MySql_Agenda
             this.dataNascDataGridViewTextBoxColumn.Name = "dataNascDataGridViewTextBoxColumn";
             this.dataNascDataGridViewTextBoxColumn.Width = 150;
             // 
+            // pessoaBindingSource
+            // 
+            this.pessoaBindingSource.DataMember = "Pessoa";
+            this.pessoaBindingSource.DataSource = this.dataSetAgendaBindingSource;
+            // 
+            // dataSetAgendaBindingSource
+            // 
+            this.dataSetAgendaBindingSource.DataSource = this.dataSet_Agenda;
+            this.dataSetAgendaBindingSource.Position = 0;
+            // 
+            // dataSet_Agenda
+            // 
+            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
+            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pessoaTableAdapter
+            // 
+            this.pessoaTableAdapter.ClearBeforeFill = true;
+            // 
             // Consultorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -312,9 +312,9 @@ namespace DS_BD_MySql_Agenda
             this.gbParametros.PerformLayout();
             this.gbFiltro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAgendaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAgendaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
             this.ResumeLayout(false);
 
         }

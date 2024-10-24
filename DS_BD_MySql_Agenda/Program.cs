@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DS_BD_MySql_Agenda.Formulários;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace DS_BD_MySql_Agenda
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Consultorio());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }
