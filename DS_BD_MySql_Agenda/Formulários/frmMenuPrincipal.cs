@@ -37,5 +37,12 @@ namespace DS_BD_MySql_Agenda.Formulários
             objCadastro.MdiParent = this;
             objCadastro.Show();
         }
+
+        private void relatórioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaPessoas objVisualiza = new frmListaPessoas();
+            objVisualiza.MdiParent = this;
+            objVisualiza.Show();  
+        }
     }
 }

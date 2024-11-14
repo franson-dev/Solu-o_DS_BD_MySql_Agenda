@@ -33,11 +33,12 @@ namespace DS_BD_MySql_Agenda.Formulários
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarPessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consutarPessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consutarPessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarPessoasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,13 @@ namespace DS_BD_MySql_Agenda.Formulários
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
+            // cadastrarPessoasToolStripMenuItem
+            // 
+            this.cadastrarPessoasToolStripMenuItem.Name = "cadastrarPessoasToolStripMenuItem";
+            this.cadastrarPessoasToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
+            this.cadastrarPessoasToolStripMenuItem.Text = "Cadastrar Pessoas";
+            this.cadastrarPessoasToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPessoasToolStripMenuItem_Click);
+            // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -77,10 +85,18 @@ namespace DS_BD_MySql_Agenda.Formulários
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
+            // consutarPessoasToolStripMenuItem
+            // 
+            this.consutarPessoasToolStripMenuItem.Name = "consutarPessoasToolStripMenuItem";
+            this.consutarPessoasToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
+            this.consutarPessoasToolStripMenuItem.Text = "Consutar Pessoas";
+            this.consutarPessoasToolStripMenuItem.Click += new System.EventHandler(this.consutarPessoasToolStripMenuItem_Click);
+            // 
             // relatóriosToolStripMenuItem
             // 
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listaDePessoasToolStripMenuItem});
+            this.listaDePessoasToolStripMenuItem,
+            this.relatórioToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
@@ -88,23 +104,16 @@ namespace DS_BD_MySql_Agenda.Formulários
             // listaDePessoasToolStripMenuItem
             // 
             this.listaDePessoasToolStripMenuItem.Name = "listaDePessoasToolStripMenuItem";
-            this.listaDePessoasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.listaDePessoasToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
             this.listaDePessoasToolStripMenuItem.Text = "Lista de Pessoas";
             this.listaDePessoasToolStripMenuItem.Click += new System.EventHandler(this.listaDePessoasToolStripMenuItem_Click);
             // 
-            // consutarPessoasToolStripMenuItem
+            // relatórioToolStripMenuItem
             // 
-            this.consutarPessoasToolStripMenuItem.Name = "consutarPessoasToolStripMenuItem";
-            this.consutarPessoasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.consutarPessoasToolStripMenuItem.Text = "Consutar Pessoas";
-            this.consutarPessoasToolStripMenuItem.Click += new System.EventHandler(this.consutarPessoasToolStripMenuItem_Click);
-            // 
-            // cadastrarPessoasToolStripMenuItem
-            // 
-            this.cadastrarPessoasToolStripMenuItem.Name = "cadastrarPessoasToolStripMenuItem";
-            this.cadastrarPessoasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.cadastrarPessoasToolStripMenuItem.Text = "Cadastrar Pessoas";
-            this.cadastrarPessoasToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPessoasToolStripMenuItem_Click);
+            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
+            this.relatórioToolStripMenuItem.Text = "Relatório de Pessoas";
+            this.relatórioToolStripMenuItem.Click += new System.EventHandler(this.relatórioToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -112,6 +121,7 @@ namespace DS_BD_MySql_Agenda.Formulários
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
             this.Text = "frmMenuPrincipal";
@@ -132,5 +142,6 @@ namespace DS_BD_MySql_Agenda.Formulários
         private System.Windows.Forms.ToolStripMenuItem listaDePessoasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consutarPessoasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarPessoasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
     }
 }
